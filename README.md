@@ -1,6 +1,6 @@
 # vue-cli
 
-> 脚手架实践
+> vue 脚手架实践
 
 ## Build Setup
 
