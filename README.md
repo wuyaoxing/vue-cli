@@ -27,4 +27,23 @@ npm run e2e
 npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 目录结构
+对于深层文件夹，命名上尽量避免直接使用index定义文件名称，这样不利于快速锁定目标。
+可以直接import指定文件，也可以使用一下方式：
+```
+src
+  |--- components/
+       |--- com/
+           |--- a.vue
+           |--- b.vue
+           |--- index.js
+```
+```index.js
+import a from './a'
+import filesContent from './b'
+
+export {
+    a,
+    b
+}
+```
