@@ -21,13 +21,13 @@ module.exports = {
   resolve: {
     modules: [
       resolve('src'),
-      resolve('node_modules')
+      resolve('node_modules'),
     ],
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      fonts: 'assets/fonts',
-      images: 'assets/images'
+      fonts: 'common/fonts',
+      images: 'common/images',
     }
   },
   module: {
