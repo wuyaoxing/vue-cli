@@ -4,6 +4,8 @@ var path = require('path')
 module.exports = {
     build: {
         env: require('./prod.env'),
+        port: 9000,
+        autoOpenBrowser: true,
         index: path.resolve(__dirname, '../dist/index.html'),
         assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: 'static',
@@ -23,7 +25,7 @@ module.exports = {
     },
     dev: {
         env: require('./dev.env'),
-        port: 3000,
+        port: 4000,
         autoOpenBrowser: true,
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
@@ -32,7 +34,7 @@ module.exports = {
                 target: 'http://192.168.1.10:8080',
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/api': '/api'
+                    '^/api': ''
                 }
             }
         },

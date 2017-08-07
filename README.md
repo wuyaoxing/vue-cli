@@ -40,7 +40,7 @@ src
 ```
 ```index.js
 import a from './a'
-import filesContent from './b'
+import b from './b'
 
 export {
     a,
