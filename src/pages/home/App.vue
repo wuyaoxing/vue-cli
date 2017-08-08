@@ -2,13 +2,16 @@
     <div id="app">
         <img src="common/images/default.png">
         <loading></loading>
+        <router-link to="/">甘特图</router-link>
+        <router-link to="/1">甘特图1</router-link>
+        <router-link to="/2">甘特图2</router-link>
+        <router-link to="/3">甘特图3</router-link>
         <router-view></router-view>
     </div>
 </template>
 
 <script>
 import loading from 'base/loading'
-import { GET } from 'core/ajax'
 
 export default {
     name: 'app',
@@ -16,13 +19,6 @@ export default {
         loading
     },
     mounted () {
-        GET('projects/0TRJpUDTtyq/kanbans').then((response) => {
-            console.log(response.data)
-            console.log(response.status)
-            console.log(response.statusText)
-            console.log(response.headers)
-            console.log(response.config)
-        })
         window.addEventListener('load', (event) => {
             console.log('All resources finished loading!')
         })
