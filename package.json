@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "fastclick": "^1.0.6",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "vue": "^2.4.2",
@@ -98,7 +99,7 @@
   },
   "engines": {
     "node": ">= 4.0.0",
-    "npm": ">= 3.0.0"
+    "npm": ">= 5.0.0"
   },
   "browserslist": [
     "> 1%",

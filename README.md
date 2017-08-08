@@ -2,6 +2,10 @@
 
 > vue 脚手架实践
 
+## npm版本
+npm版本要大于5，更新：
+> npm install npm@latest -g
+
 ## Build Setup
 
 ``` bash
