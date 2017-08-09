@@ -17,7 +17,6 @@ exports.entries = function() {
         var filename = filePath.substring(filePath.lastIndexOf('\/') + 1, filePath.lastIndexOf('.'))
         map[filename] = filePath
     })
-    console.log('entries:', map)
     return map
 }
 
@@ -28,6 +27,7 @@ exports.htmlPlugin = function() {
     entryHtml.forEach((filePath) => {
         let filename = filePath.substring(filePath.lastIndexOf('\/') + 1, filePath.lastIndexOf('.'))
         let conf = {
+            title: filename,
             template: filePath,
             filename: filename + '.html',
             chunks: ['manifest', 'vendor', filename],
@@ -45,7 +45,6 @@ exports.htmlPlugin = function() {
         }
         arr.push(new HtmlWebpackPlugin(conf))
     })
-    console.log('htmlPlugin:', arr)
     return arr
 }
 

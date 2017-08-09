@@ -6,7 +6,7 @@
     </div>
 </template>
 <style lang="less">
-@import '~common/less/variables';
+@import "~assets/less/variables";
 
 .epm-loading- {
     &box {
