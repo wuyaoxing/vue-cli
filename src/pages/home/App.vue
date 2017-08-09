@@ -1,11 +1,11 @@
 <template>
     <div id="app">
-        <img src="common/images/default.png">
+        <img src="assets/images/default.png">
         <loading></loading>
-        <router-link to="/">甘特图</router-link>
-        <router-link to="/1">甘特图1</router-link>
-        <router-link to="/2">甘特图2</router-link>
-        <router-link to="/3">甘特图3</router-link>
+        <router-link to="/">0</router-link>
+        <router-link to="/1">1</router-link>
+        <router-link to="/2">2</router-link>
+        <router-link to="/3">3</router-link>
         <router-view></router-view>
     </div>
 </template>

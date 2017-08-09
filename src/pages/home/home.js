@@ -8,7 +8,7 @@ import FastClick from 'fastclick'
 Vue.config.productionTip = false
 
 FastClick.attach(document.body)
-
+console.log('home')
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
