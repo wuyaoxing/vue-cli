@@ -23,21 +23,16 @@ export default {
 }
 </script>
 <style lang="stylus">
-.layout {
-    display: flex;
-    width: 100%;
-    height: 100%;
-
-    &-container {
-        position: relative;
-        display: flex;
-        flex: 1;
-        overflow-y: auto;
-        background: #f0f2f5;
-
-        & > div {
-            width: 100%;
-        }
-    }
-}
+.layout
+    display flex
+    width 100%
+    height 100%
+    &-container
+        position relative
+        display flex
+        flex 1
+        overflow-y auto
+        background #f0f2f5
+        & > div
+            width 100%
 </style>
