@@ -37,11 +37,23 @@
                      @change="selectChange">
         </cube-select>
 
-
+        <p>## toast</p>
         <cube-button @click="showToast">show toast</cube-button>
+        <p>## upload</p>
+        <div>
+            <cube-upload ref="upload2"
+                         :action="uploadAction"
+                         :simultaneous-uploads="1"
+                         :process-file="processFile"
+                         :value="files"
+                         @file-removed="removed"
+                         @file-submitted="fileSubmitted" />
+        </div>
     </div>
 </template>
 <script>
+import compress from 'lib/image'
+
 export default {
     name: 'app-project',
     data() {
@@ -72,7 +84,27 @@ export default {
             selectTitle: '入职时间',
             selectPlaceholder: '请选择入职时间',
             selectAutoPop: false,
-            selectDisabled: false
+            selectDisabled: false,
+            uploadAction: {
+                target: 'url',
+                prop: 'base64Value'
+            },
+            files: [
+                {
+                    id: 11,
+                    name: 'desk.png',
+                    url: '',
+                    progress: 0.8,
+                    status: 'success'
+                },
+                {
+                    id: 12,
+                    name: 'desk.png',
+                    url: '',
+                    progress: 0.8,
+                    status: 'success'
+                }
+            ]
         }
     },
     methods: {
@@ -117,6 +149,22 @@ export default {
         },
         selectChange(value, index, text) {
             console.log('selectChange', value, index, text)
+        },
+        processFile(file, next) {
+            compress(file, {
+                compress: {
+                    width: 1600,
+                    height: 1600,
+                    quality: 0.5
+                }
+            }, next)
+        },
+        fileSubmitted(file) {
+            console.log('S:', file)
+            file.base64Value = file.file.base64
+        },
+        removed(file) {
+            console.log('R:', file)
         }
     }
 }
